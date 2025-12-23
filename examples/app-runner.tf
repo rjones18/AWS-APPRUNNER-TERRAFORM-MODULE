@@ -6,8 +6,8 @@ module "malik_apprunner" {
   image_identifier = var.ecr_image_uri
   container_port   = 8080
 
-  cpu    = "1024"   # 1 vCPU
-  memory = "2048"   # 2 GB RAM
+  cpu    = "1024" # 1 vCPU
+  memory = "2048" # 2 GB RAM
 
   auto_deployments_enabled = true
 
