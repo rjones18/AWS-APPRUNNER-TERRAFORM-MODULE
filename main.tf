@@ -30,7 +30,7 @@ resource "aws_iam_role" "apprunner_access_role" {
 
 # AWS-managed policy allows ECR pulls for App Runner build service
 resource "aws_iam_role_policy_attachment" "apprunner_ecr_access" {
-  role      = aws_iam_role.apprunner_access_role.name
+  role       = aws_iam_role.apprunner_access_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSAppRunnerServicePolicyForECRAccess"
 }
 
@@ -79,7 +79,7 @@ resource "aws_iam_policy" "secrets_read" {
 resource "aws_iam_role_policy_attachment" "secrets_read_attach" {
   count      = length(var.secretsmanager_arns) > 0 ? 1 : 0
   role       = aws_iam_role.apprunner_instance_role.name
-  policy_arn  = aws_iam_policy.secrets_read[0].arn
+  policy_arn = aws_iam_policy.secrets_read[0].arn
 }
 
 # --------------------------------------------

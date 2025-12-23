@@ -55,8 +55,8 @@ variable "secret_env" {
 Map of ENV_VAR_NAME => Secrets Manager secret ARN or Parameter Store ARN
 (App Runner will inject it as an environment variable)
 EOT
-  type    = map(string)
-  default = {}
+  type        = map(string)
+  default     = {}
 }
 
 variable "secretsmanager_arns" {
