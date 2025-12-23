@@ -3,12 +3,6 @@ variable "name" {
   type        = string
 }
 
-variable "region" {
-  description = "AWS region (used in role policy conditions sometimes). Optional."
-  type        = string
-  default     = null
-}
-
 variable "image_identifier" {
   description = "ECR image URI (e.g., 123.dkr.ecr.us-east-1.amazonaws.com/repo:tag)"
   type        = string
